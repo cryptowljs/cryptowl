@@ -1,6 +1,6 @@
 {
-  "name": "@cryptolw/error",
-  "version": "0.0.1",
+  "name": "@cryptolw/market-fiat",
+  "version": "0.0.0",
   "description": "",
   "private": false,
   "main": "lib/index.js",
@@ -24,9 +24,7 @@
     "url": "https://lopezjuri.com"
   },
   "license": "MIT",
-  "dependencies": {
-    "es6-error": "^4.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
