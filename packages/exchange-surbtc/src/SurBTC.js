@@ -6,6 +6,7 @@ require("rxjs/add/observable/interval");
 require("rxjs/add/operator/startWith");
 require("rxjs/add/operator/mergeMap");
 
+const { parse } = require("@cryptolw/money");
 const CryptowlError = require("@cryptolw/error");
 
 class SurBTC {
@@ -55,12 +56,12 @@ class SurBTC {
 
             return {
               pair,
-              last: ticker["last_price"],
-              ask: ticker["min_ask"],
-              bid: ticker["max_bid"],
+              last: parse(...ticker["last_price"]),
+              ask: parse(...ticker["min_ask"]),
+              bid: parse(...ticker["max_bid"]),
               low: null,
               high: null,
-              volume: ticker["volume"],
+              volume: parse(...ticker["volume"]),
               timestamp: Date.now(),
               exchange: this.constructor.identifier,
               raw: options.raw === true ? ticker : undefined,
