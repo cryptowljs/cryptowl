@@ -1,9 +1,8 @@
 "use strict";
 
-const numeral = require("numeral");
 const accounting = require("accounting");
 
-module.exports = function money(options = {}, sources = []) {
+module.exports = function formatter(sources = [], options = {}) {
   const defaultCurrency = options.defaultCurrency || "USD";
   const formats = options.formats || {
     none: {
@@ -33,13 +32,6 @@ module.exports = function money(options = {}, sources = []) {
     return null;
   }
 
-  function parse(input = 0, currency = defaultCurrency) {
-    if (input === undefined || input === null || isNaN(input)) {
-      return null;
-    }
-    return [numeral(input).value(), currency.toUpperCase()];
-  }
-
   function format(money, opts = {}) {
     const [value, code] = money.constructor === Array ? money : [money, defaultCurrency];
 
@@ -57,5 +49,5 @@ module.exports = function money(options = {}, sources = []) {
     return accounting.formatMoney(value, symbol, precision, thousand, decimal, formatting);
   }
 
-  return { parse, format, metadata };
+  return { format, metadata };
 };

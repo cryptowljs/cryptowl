@@ -6,7 +6,7 @@ require("rxjs/add/observable/interval");
 require("rxjs/add/operator/startWith");
 require("rxjs/add/operator/mergeMap");
 
-const { parse } = require("@cryptolw/money");
+const parse = require("@cryptolw/money-parse");
 const CryptowlError = require("@cryptolw/error");
 
 class SurBTC {

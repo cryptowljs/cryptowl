@@ -1,5 +1,5 @@
 {
-  "name": "@cryptolw/money",
+  "name": "@cryptolw/money-data",
   "version": "0.0.0",
   "description": "",
   "private": false,
@@ -14,8 +14,8 @@
     "test": "jest"
   },
   "files": [
-    "data",
-    "lib",
+    "crypto",
+    "fiat",
     "src",
     "yarn.lock"
   ],
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cryptowljs/cryptowl/tree/master/packages/money"
+    "url": "https://github.com/cryptowljs/cryptowl/tree/master/packages/money-data"
   },
   "bugs": {
     "url": "https://github.com/cryptowljs/cryptowl/issues",
@@ -34,8 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "accounting": "^0.4.1",
-    "numeral": "^2.0.6"
+    "accounting": "^0.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
