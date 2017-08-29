@@ -23,6 +23,14 @@
     "name": "Patricio López Juri",
     "url": "https://lopezjuri.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cryptowljs/cryptowl/tree/master/packages/error"
+  },
+  "bugs": {
+    "url": "https://github.com/cryptowljs/cryptowl/issues",
+    "email": "patricio@lopezjuri.com"
+  },
   "license": "MIT",
   "dependencies": {
     "es6-error": "^4.0.2"
