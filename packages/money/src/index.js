@@ -1,8 +1,8 @@
 "use strict";
 
-const crypto = require("./crypto");
-const fiat = require("./fiat");
 const money = require("./money");
+const crypto = require("../data/crypto");
+const fiat = require("../data/fiat");
 
 const options = {
   decimal: ".",
