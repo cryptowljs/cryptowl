@@ -1,6 +1,6 @@
 {
   "name": "@cryptolw/money-format",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "private": false,
   "main": "lib/index.js",
@@ -36,7 +36,7 @@
     "accounting": "^0.4.1"
   },
   "devDependencies": {
-    "@cryptolw/money-data": "^0.0.0",
+    "@cryptolw/money-data": "^0.0.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",

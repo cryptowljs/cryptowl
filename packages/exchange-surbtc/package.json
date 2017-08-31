@@ -1,6 +1,6 @@
 {
   "name": "@cryptolw/exchange-surbtc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "private": false,
   "main": "lib/index.js",
@@ -33,8 +33,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@cryptolw/error": "^0.0.1",
-    "@cryptolw/money-parse": "^0.0.0",
+    "@cryptolw/error": "^0.0.2",
+    "@cryptolw/money-parse": "^0.0.1",
     "millisecond": "^0.1.2"
   },
   "peerDependencies": {
@@ -53,7 +53,9 @@
     "presets": [
       "env"
     ],
-    "plugins": ["transform-class-properties"]
+    "plugins": [
+      "transform-class-properties"
+    ]
   },
   "jest": {
     "testEnvironment": "node"
