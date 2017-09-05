@@ -23,10 +23,28 @@
     "name": "Patricio López Juri",
     "url": "https://lopezjuri.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cryptowljs/cryptowl/tree/master/packages/market-crypto"
+  },
+  "bugs": {
+    "url": "https://github.com/cryptowljs/cryptowl/issues",
+    "email": "patricio@lopezjuri.com"
+  },
   "license": "MIT",
+  "dependencies": {
+    "@cryptolw/error": "^0.0.2",
+    "@cryptolw/money-parse": "^0.0.1",
+    "millisecond": "^0.1.2"
+  },
+  "peerDependencies": {
+    "axios": "^0.16.2",
+    "rxjs": "^5.4.3"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "jest": "^21.0.1",
     "rimraf": "^2.6.1"
@@ -34,6 +52,9 @@
   "babel": {
     "presets": [
       "env"
+    ],
+    "plugins": [
+      "transform-class-properties"
     ]
   },
   "jest": {
