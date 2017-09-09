@@ -6,6 +6,7 @@ describe("money", () => {
     expect(parse("123.0", "clp")).toEqual([123, "CLP"]);
     expect(parse("123.00", "clp")).toEqual([123, "CLP"]);
     expect(parse("123.001", "clp")).toEqual([123.001, "CLP"]);
+    expect(parse("$123.001", "clp")).toEqual([123.001, "CLP"]);
     expect(parse(123, "clp")).toEqual([123, "CLP"]);
     expect(parse(123, "CLP")).toEqual([123, "CLP"]);
     expect(parse(123)).toEqual([123, "USD"]);
