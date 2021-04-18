@@ -9,15 +9,11 @@ require("rxjs/add/operator/mergeMap");
 const parse = require("@cryptolw/money-parse");
 const CryptowlError = require("@cryptolw/error");
 
-function min(...values) {
-  return Math.min(...values.map(Number));
-}
-
 class CryptoMKT {
   static identifier = "CryptoMKT";
 
   static defaults = {
-    baseURL: "https://www.cryptomkt.com/api/",
+    baseURL: "https://api.cryptomkt.com/",
     timeout: 3000,
     headers: {
       Accept: "application/json",
@@ -39,7 +35,7 @@ class CryptoMKT {
       markets.map(pair => {
         const exchange = pair.join("").toLowerCase();
         return this.client
-          .get(`/${exchange}/1440.json`)
+          .get(`/v1/ticker?market=${exchange}`)
           .then(({ data }) => {
             if (data["status"] !== "success") {
               throw new CryptowlError("Error querying CryptoMKT.", { pair });
@@ -47,24 +43,24 @@ class CryptoMKT {
 
             const [coin, fiat] = pair;
             const timeline = {
-              ask: data["data"]["prices_ask"]["values"],
-              bid: data["data"]["prices_bid"]["values"],
+              ask: data["data"]["ask"],
+              bid: data["data"]["bid"],
             };
-            const bidding = timeline.bid[0];
-            const asking = timeline.ask[0];
+            const bidding = timeline.bid;
+            const asking = timeline.ask;
 
-            const ask = parse(asking["close_price"], fiat);
-            const bid = parse(bidding["close_price"], fiat);
+            const ask = parse(asking, fiat);
+            const bid = parse(bidding, fiat);
 
             return {
               pair,
               last: parse((ask[0] + bid[0]) / 2, fiat), // TODO.
               ask,
               bid,
-              low: parse(min(asking["low_price"], bidding["low_price"]), fiat),
-              high: parse(min(asking["hight_price"], bidding["hight_price"]), fiat),
-              volume: parse(asking["volume_sum"], coin),
-              timestamp: Date.now(),
+              low: parse(data["low"], fiat),
+              high: parse(data["high"], fiat),
+              volume: parse(data["volume"], coin),
+              timestamp: data["timestamp"],
               exchange: this.constructor.identifier,
               raw: options.raw === true ? data["data"] : undefined,
             };

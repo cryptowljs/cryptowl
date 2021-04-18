@@ -13,7 +13,7 @@ class SurBTC {
   static identifier = "SurBTC";
 
   static defaults = {
-    baseURL: "https://www.surbtc.com/api/v2/",
+    baseURL: "https://www.buda.com/api/v2/",
     timeout: 3000,
     headers: {
       Accept: "application/json",

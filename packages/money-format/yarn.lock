@@ -2,12 +2,6 @@
 # yarn lockfile v1
 
 
-"@cryptolw/money-data@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@cryptolw/money-data/-/money-data-0.0.2.tgz#fd05785c9b90c72f050cdfd71ee74d92829d6478"
-  dependencies:
-    accounting "^0.4.1"
-
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
