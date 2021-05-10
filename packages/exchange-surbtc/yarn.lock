@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@cryptolw/error@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@cryptolw/error/-/error-0.0.3.tgz#bd7e32dfa88725cf2ad8adb73d9ce547f41f797c"
+  dependencies:
+    es6-error "^4.0.2"
+
 "@cryptolw/money-parse@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@cryptolw/money-parse/-/money-parse-0.0.2.tgz#4f1fd950260dde75a1f63a9b5eb320b58c45cba5"
@@ -1022,6 +1028,10 @@ error-ex@^1.2.0:
   dependencies:
     is-arrayish "^0.2.1"
 
+es6-error@^4.0.2:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/es6-error/-/es6-error-4.1.1.tgz#9e3af407459deed47e9a91f9b885a84eb05c561d"
+
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -1380,8 +1390,8 @@ home-or-tmp@^2.0.0:
     os-tmpdir "^1.0.1"
 
 hosted-git-info@^2.1.4:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 html-encoding-sniffer@^1.0.1:
   version "1.0.2"
